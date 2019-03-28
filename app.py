@@ -21,7 +21,6 @@ def load_request_image(image):
     image = img_to_array(image)
     image = preprocess_input(image)
     image = np.expand_dims(image, axis=0)
-    # image = image.astype('float32') / 255
 
     return image
 
@@ -58,7 +57,7 @@ def predict():
 
 if __name__ == "__main__":
     load_model()
-    app.run(debug = True, threaded = False)
+    app.run(debug = False, threaded = False)
 
 if __name__ == "app":
     load_model()
