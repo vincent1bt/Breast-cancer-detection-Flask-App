@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Breast cancer detection Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <section class="header">
+        <h2>Breast cancer detection Flask App</h2>
+    </section>
+
+    <section class="content">
+        <div class="text_content">
+            <p>
+                The model has a sensitivity of 85.6% and a specificity of 86%.
+                The code of this project is available <a target="_blank" href="https://nbviewer.jupyter.org/github/vincent1bt/Healthy-notebooks/blob/master/breastCancer.ipynb">as a Jupyter notebook.</a>
+            </p>
+            <p>
+                You can download the images on <a target="_blank" href="https://www.kaggle.com/paultimothymooney/breast-histopathology-images">Kaggle</a> and test the neuronal network: 
+            </p>
+            <input type="file" id="image" accept="image/*">
+        </div>
+        <div class="image_content">
+            <img src="" alt="" id="imageContainer" />
+        </div>
+        <div class="class_content">
+            <img src="{{ url_for('static', filename='loading.gif') }}" alt="" id="loadingGif">
+            <p id="imageClass">
+            </p>
+            <p id="imageConfidence">
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a target="_blank" href="https://twitter.com/vincent1bt">Twitter</a>
+        <a target="_blank" href="https://github.com/vincent1bt">Github</a>
+        <a target="_blank" href="https://vincentblog.xyz/">My web page</a>
+    </footer>
+</body>
+</html>
